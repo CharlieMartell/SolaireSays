@@ -13,7 +13,7 @@ This application will print out a Dark Souls NPC ASCII art and a quote from them
 * Pip install package: `pushd ~/.solairesays && pip install . && popd`
 
 #### TODO:
-* Implemenent new npcs:
+* Implement new npcs:
   * Siegmeyer of Catarina
   * Frampt/ Kaathe
   * Petrus of Thorulund
