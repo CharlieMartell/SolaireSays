@@ -27,7 +27,7 @@ setup(
         ),
     entry_points = {
         'console_scripts': [
-            'solairesays = solairesays:main'
+            'solairesays = scripts.solairesays:main'
         ]
     }
 )

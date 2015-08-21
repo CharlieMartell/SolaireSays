@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import textwrap, random
-from quote import QUOTES, NPCS, NPC_ASCII
+from utils.quote import QUOTES, NPCS, NPC_ASCII
 
 def get_border(lines, index):
     """
