@@ -1,7 +1,7 @@
 # SolaireSays
 :sunny: Praise the Sun :sunny:
 
-This application will print out a Dark Souls NPC ASCII art and a quote from them in a cowsay like fashon.
+This application will print out a Dark Souls NPC ASCII art and a quote from them in a cowsay like fashion.
 
 
 ### Requires:
