@@ -1,17 +1,11 @@
 #!/usr/bin/env python
 import textwrap, random
-from quote import QUOTES, NPCS
-
-def build_solaire():
-   return """
-     __    ___________    __
-     \ \  | ___| |___ |  / /
-      \ \ ||___| |___|| / /
-       \ \|    | |    |/ /
-        \_|____|_|____|_/
-    """
+from quote import QUOTES, NPCS, NPC_ASCII
 
 def get_border(lines, index):
+    """
+    Creates a border around a given npc quote
+    """
     if len(lines) < 2:
         return [ "<", ">" ]
     elif index == 0:
@@ -22,11 +16,17 @@ def get_border(lines, index):
         return [ "|", "|" ]
 
 def normalize(str, length):
+    """
+    Normalizes text to fit in bubble nicely.
+    """
     lines  = textwrap.wrap(str, length)
     maxlen = len(max(lines, key=len))
     return [ line.ljust(maxlen) for line in lines ]
 
 def bubble(str, length=40):
+    """
+    Bubbles text
+    """
     bubble = []
     lines = normalize(str, length)
     bordersize = len(lines[0])
@@ -37,18 +37,21 @@ def bubble(str, length=40):
     bubble.append("  " + "-" * bordersize)
     return "\n".join(bubble)
 
-def solaire_says(str, length=40):
-    return bubble(str, length) + build_solaire()
-
-def random_quote():
-    npc = NPCS[0] # To be randomized when more npcs are supported
+def random_npc_quote():
+    """
+    Gets a random npc and quote and returns tuple of them.
+    """
+    npc = random.choice(NPCS)
     quote = random.choice(QUOTES[npc])
     full_quote = "{} - {}".format(quote, npc)
-    return full_quote
+    return (npc, full_quote)
+
+def solaire_says(npc, quote, length=40):
+    return bubble(quote, length) + NPC_ASCII[npc]
 
 def main():
-    quote = random_quote()
-    print solaire_says(quote)
+    (npc, quote) = random_npc_quote()
+    print solaire_says(npc, quote)
 
 if __name__ == '__main__':
     main()

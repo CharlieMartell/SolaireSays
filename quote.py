@@ -4,7 +4,25 @@
      This module will provide dictionary of quotes from Dark Souls NPCs to pull from.
 """
 
+# List of NPCS to randomly choose from
 NPCS = ["Solaire of Astora"]
+
+# Dictionary of npcs and their art
+# NOTE: You want the middle of the char to be at line 20 without
+# either side going over.
+NPC_ASCII = {
+"Solaire of Astora":
+"""
+        __    ___________    __
+        \ \  | ___| |___ |  / /
+         \ \ ||___| |___|| / /
+          \ \|    | |    |/ /
+           \_|____|_|____|_/
+"""
+
+}
+
+# Dictionary of npcs and lists of their quotes
 QUOTES = {
     "Solaire of Astora" : [
         "Oh, hello there.",
