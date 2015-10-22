@@ -9,8 +9,8 @@ This application will print out a Dark Souls NPC ASCII art and a quote from them
 * Pip
 
 ### Installation:
-* Clone repo: `git clone git@github.com:CharlieMartell/SolaireSays.git ~/.solairesays`
-* Pip install package: `pushd ~/.solairesays && pip install . && popd`
+* Clone repo: `git clone https://github.com/CharlieMartell/SolaireSays.git ~/.solairesays`
+* Pip install package: `pushd ~/.solairesays && sudo pip install . && popd`
 
 #### TODO:
 * Implement new npcs:
